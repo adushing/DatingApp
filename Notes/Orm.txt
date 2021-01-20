@@ -1,0 +1,35 @@
+What is Entity framework?
+	- It is an ORM.
+
+What is ORM ?
+	- An Object Relational Mapper
+	- Translates our code into SQL commands that updates our tables in the database.
+	
+Need of Entity framework
+	- Prior to .net 3.5(original .net framework), we often use to write ADO .net code to save or retrieve application
+	  data from an underlying database.
+	- 1. Open connection to db 
+	  2. Create a dataset to fetch
+	  3. Convert data from dataset to .net objects.
+	This was a cumbersome and errorprone process, coz we would be writing the db access codes as sql codes which would be in
+	the form of strings and it was easy to make mistakes.
+Hence entity framework is required. 
+
+What entity framwork does ?
+	  
+	  Entity 		Entity Framwork 
+	  AppUser 		   Db Context 
+	
+	DbContext.Users.Add(new User{Id = 4, Name = John})	---> Sqlite Provider ---> INSERT INTO Users(Id, name) Values(4,John)
+
+
+Features : 
+	- Querying.
+	- Change Tracking
+	- Saving
+	- Concurrency
+	- Transactions
+	- Caching
+	- Built-in conventions(Id, UserName, etc)
+	- Configurations	
+	- Migrations	
